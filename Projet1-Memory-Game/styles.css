@@ -1,46 +1,55 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
  
 
 body{
-    background: url("https://image.freepik.com/free-vector/blank-landscape-scene-nature-park-sunset-time_1308-66585.jpg") no-repeat;
-    background-size: cover;
+    background: url(img/background-img.jpeg);
+    width: 100vw;
+    height: 100vh;
     display: flex;
-  
-}
-
-img{
-    width: 100px;
-}
-
-.project1{
-    text-align: center;
-}
-.score{
-    padding: 20px;
-    padding-top: 0;
-    margin-left: 15px;
-    width: 200px;
-}
-
-table{
-    text-align: center;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 40px 0;
+    align-items: center; 
+} 
+
+
+
+.memory{
+   width: 850px;
+   height: 600px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   
 }
 
-td{
-    text-align: center;
-    width: 70px;
-    height: 70px;
-
+.memory-card{
+    width: 200px;
+    height: 200px;
+    margin: 3px;
+    position: relative;
+   
 }
+
+.front, .back{
+    width: 100%;
+    height: 100%;
+   
+    position: absolute;
+    backface-visibility: hidden;
+}
+ .front{
+     transform: rotateY();
+ }
+ 
+ .memory-card.flip{
+     transform: rotateY(189deg);
+ }
+
+
+
 
 
 
