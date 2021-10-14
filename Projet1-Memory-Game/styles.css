@@ -9,36 +9,54 @@ body{
     background: url(img/background-img.jpeg);
     width: 100vw;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center; 
-} 
+    font-family: monospace;
+}
 
-#timer{
+
+h1{
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ffb6c1;
+   font-size: 4rem;
+   margin-top: 2%;
+   font-family: Blippo;
+   
+}
+
+#temps{
     font-weight: bold;
 }
 
 .score{
     font-size: 30px;
-    font-family: Arial;  
+   font-family: fantasy;
+    margin-left: 1%;
+    margin-top: 0;
+    font-family: Blippo;
 }
-
+    
 .memory{
    width: 850px;
-   height: 600px;
+   
    display: flex;
    flex-wrap: wrap;
-   justify-content: center;
-   
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .memory-card{
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 170px;
     margin: 3px;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.3s ease-out;
+    transition: transform 2s ease;
+    padding-bottom: 1em;
+
 }
 
 .front, .back{
@@ -47,13 +65,14 @@ body{
     position: absolute;
     backface-visibility: hidden;
 }
- .front{
-     transform: rotateY(0.5turn);
- }
+
+.front{
+    transform: rotateY(0.5turn);
+}
  
- .memory-card.flip{
-     transform: rotateY(180deg) perspective(1000px);
- }
+.memory-card.flip{
+    transform: rotateY(180deg) perspective(1000px);
+}
 
 
 

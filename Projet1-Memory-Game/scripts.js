@@ -5,38 +5,47 @@ let isCardFlipped = false;
 let firstCard, secondCard;
 
 function flipcard(){
-    this.classList.toggle("flip");
+    //
+    // fonction qui est appelee a chq fois qu'on click sur une carte
+    //
+
+    // this vaut l'elemetn clique <div class="memory-card">
+
+    this.classList.toggle("flip"); // mettre ou enlever la class "flip"
+
+
     if (!isCardFlipped){
-        isCardFlipped = true;
+        isCardFlipped = true; // 1ere carte retournée
         firstCard = this;
     } else {
-        isCardFlipped = false;
+        isCardFlipped = false;  // 2second carte retournée 
         secondCard = this;
-        if (firstCard.dataset.name === secondCard.dataset.name){
+        if (firstCard.dataset.name === secondCard.dataset.name){ // si les deux cartes correspondent
             firstCard.removeEventListener("click", flipcard);
             secondCard.removeEventListener("click", flipcard);
         } else {
             setTimeout(()=>{
-                firstCard.classList.remove("flip");
-                secondCard.classList.remove("flip");
-            },1500);
+                firstCard.classList.remove("flip"); //retirer la 1ere carte
+                secondCard.classList.remove("flip"); // retirer la 2eme carte
+            },1000);
         }
         }
     }
-    cards.forEach((card)=> {
+    cards.forEach((card)=> { //ecoute ttes les cartes
     card.addEventListener("click", flipcard);
     });
-
+ 
+    //temps
     let temps = 30
-    const timerElement = document.getElementById("timer")
-    timerElement.innerText = "29"
+    const tempsElement = document.getElementById("temps")
+    tempsElement.innerText = "29"
 
     
-
-    function diminuerTemps() {
-        timerElement.innerText = temps
+    //reduire chaque seconde
+    function reduireTemps() {
+        tempsElement.innerText = temps
         temps--
     }
-
-    setInterval(diminuerTemps, 1000)
+    //arrete a 0
+    setInterval(reduireTemps, 1000)
     temps = temps <= 0 ? 0 : temps - 1
