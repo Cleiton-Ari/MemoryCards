@@ -18,23 +18,28 @@ body{
 h1{
     text-align: center;
     margin-bottom: 1rem;
-    color: #ffb6c1;
+    color: #4169E1;
    font-size: 4rem;
    margin-top: 2%;
    font-family: Blippo;
-   
 }
 
 #temps{
     font-weight: bold;
+    width: 100px;
+    margin-right: 10%;
+    margin-top: 0;
+    font-size: 50px;
+    margin-left: 95%;
+    color:#FF1493;
 }
 
 .score{
     font-size: 30px;
-   font-family: fantasy;
     margin-left: 1%;
     margin-top: 0;
     font-family: Blippo;
+    color: #4169E1;
 }
     
 .memory{
@@ -71,7 +76,7 @@ h1{
 }
  
 .memory-card.flip{
-    transform: rotateY(180deg) perspective(1000px);
+    transform: rotateY(180deg) perspective(900px);
 }
 
 

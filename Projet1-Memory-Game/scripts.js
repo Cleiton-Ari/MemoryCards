@@ -27,25 +27,30 @@ function flipcard(){
             setTimeout(()=>{
                 firstCard.classList.remove("flip"); //retirer la 1ere carte
                 secondCard.classList.remove("flip"); // retirer la 2eme carte
-            },1000);
+            },900);
         }
         }
     }
     cards.forEach((card)=> { //ecoute ttes les cartes
     card.addEventListener("click", flipcard);
     });
- 
+
+
     //temps
     let temps = 30
     const tempsElement = document.getElementById("temps")
     tempsElement.innerText = "29"
 
     
-    //reduire chaque seconde
+    //reduire le temps a chaque seconde
     function reduireTemps() {
         tempsElement.innerText = temps
         temps--
-    }
+    };     
     //arrete a 0
     setInterval(reduireTemps, 1000)
-    temps = temps <= 0 ? 0 : temps - 1
+        temps = temps <= 0 ? 0 : temps - 1
+   
+    
+
+   
